@@ -17,6 +17,8 @@
 		704B8E1429B4CAD60084D31A /* UnsplashServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B8E1329B4CAD60084D31A /* UnsplashServer.swift */; };
 		704B8E1829B4CB310084D31A /* UnsplashRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B8E1729B4CB310084D31A /* UnsplashRepository.swift */; };
 		704B8E1A29B4CED20084D31A /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B8E1929B4CED20084D31A /* APIClient.swift */; };
+		704B8E1D29B4D3F70084D31A /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 704B8E1C29B4D3F70084D31A /* URLImage */; };
+		704B8E1F29B4D3F70084D31A /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = 704B8E1E29B4D3F70084D31A /* URLImageStore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				704B8E1F29B4D3F70084D31A /* URLImageStore in Frameworks */,
+				704B8E1D29B4D3F70084D31A /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +162,8 @@
 			);
 			name = DGTD;
 			packageProductDependencies = (
+				704B8E1C29B4D3F70084D31A /* URLImage */,
+				704B8E1E29B4D3F70084D31A /* URLImageStore */,
 			);
 			productName = DGTD;
 			productReference = 704B8DEC29B460ED0084D31A /* DGTD.app */;
@@ -188,6 +194,7 @@
 			);
 			mainGroup = 704B8DE329B460ED0084D31A;
 			packageReferences = (
+				704B8E1B29B4D3F70084D31A /* XCRemoteSwiftPackageReference "url-image" */,
 			);
 			productRefGroup = 704B8DED29B460ED0084D31A /* Products */;
 			projectDirPath = "";
@@ -423,6 +430,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		704B8E1B29B4D3F70084D31A /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		704B8E1C29B4D3F70084D31A /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 704B8E1B29B4D3F70084D31A /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+		704B8E1E29B4D3F70084D31A /* URLImageStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 704B8E1B29B4D3F70084D31A /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImageStore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 704B8DE429B460ED0084D31A /* Project object */;
 }

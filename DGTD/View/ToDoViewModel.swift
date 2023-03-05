@@ -6,10 +6,11 @@
 //
 
 import Combine
+import Foundation
 
 class ToDoViewModel: ObservableObject {
     
-    private(set) var imageUrl: String?
+    @Published private(set) var imageUrl: String?
     
     private let unsplashRepository: UnsplashRepository
     private let unsplashServer: UnsplashServer
@@ -28,6 +29,7 @@ class ToDoViewModel: ObservableObject {
         unsplashRepository.getPhoto(datasource: unsplashServer)
             .map({ $0.urls.full })
             .replaceError(with: "")
+            .receive(on: DispatchQueue.main)
             .sink { fullUrl in
                 self.imageUrl = fullUrl
             }

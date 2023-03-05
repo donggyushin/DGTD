@@ -9,6 +9,8 @@ import Combine
 
 class ToDoViewModel: ObservableObject {
     
+    private(set) var imageUrl: String?
+    
     private let unsplashRepository: UnsplashRepository
     private let unsplashServer: UnsplashServer
     
@@ -24,18 +26,12 @@ class ToDoViewModel: ObservableObject {
     
     private func fetchPhoto() {
         unsplashRepository.getPhoto(datasource: unsplashServer)
-            .sink { completion in
-                switch completion {
-                case .failure(let error):
-                    print("dg: error: \(error.localizedDescription)")
-                case .finished:
-                    print("dg: finish")
-                }
-            } receiveValue: { unsplash in
-                print("dg: unsplash: \(unsplash)")
+            .map({ $0.urls.full })
+            .replaceError(with: "")
+            .sink { fullUrl in
+                self.imageUrl = fullUrl
             }
             .store(in: &cancellables)
-
     }
     
 }

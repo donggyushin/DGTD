@@ -13,6 +13,7 @@
 		704B8DF729B460EE0084D31A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 704B8DF629B460EE0084D31A /* Preview Assets.xcassets */; };
 		704B8E0429B4642D0084D31A /* ToDoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B8E0329B4642D0084D31A /* ToDoViewModel.swift */; };
 		704B8E0629B465E40084D31A /* secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B8E0529B465E40084D31A /* secret.swift */; };
+		704B8E0929B467060084D31A /* UnsplashPhotoPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 704B8E0829B467060084D31A /* UnsplashPhotoPicker */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				704B8E0929B467060084D31A /* UnsplashPhotoPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +131,9 @@
 			dependencies = (
 			);
 			name = DGTD;
+			packageProductDependencies = (
+				704B8E0829B467060084D31A /* UnsplashPhotoPicker */,
+			);
 			productName = DGTD;
 			productReference = 704B8DEC29B460ED0084D31A /* DGTD.app */;
 			productType = "com.apple.product-type.application";
@@ -157,6 +162,9 @@
 				Base,
 			);
 			mainGroup = 704B8DE329B460ED0084D31A;
+			packageReferences = (
+				704B8E0729B467060084D31A /* XCRemoteSwiftPackageReference "unsplash-photopicker-ios" */,
+			);
 			productRefGroup = 704B8DED29B460ED0084D31A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -387,6 +395,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		704B8E0729B467060084D31A /* XCRemoteSwiftPackageReference "unsplash-photopicker-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/unsplash/unsplash-photopicker-ios#swift-package-manager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		704B8E0829B467060084D31A /* UnsplashPhotoPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 704B8E0729B467060084D31A /* XCRemoteSwiftPackageReference "unsplash-photopicker-ios" */;
+			productName = UnsplashPhotoPicker;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 704B8DE429B460ED0084D31A /* Project object */;
 }

@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  ToDoView.swift
 //  DGTD
 //
 //  Created by 신동규 on 2023/03/05.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ToDoView: View {
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -21,6 +21,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ToDoView()
     }
 }

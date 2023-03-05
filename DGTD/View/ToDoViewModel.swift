@@ -9,6 +9,7 @@ import Combine
 
 class ToDoViewModel: ObservableObject {
     
-    @Published private(set) var backgroundImageUrl: String?
+    init() {
+    }
     
 }

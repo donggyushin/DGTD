@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ToDoView: View {
     
-    @ObservedObject var viewModel: ToDoViewModel = .init()
+    @ObservedObject var viewModel: ToDoViewModel = .init(unsplashRepository: UnsplashRepository.shared, unsplashDatasource: UnsplashDataSourceLive.shared)
     
     var body: some View {
         VStack {

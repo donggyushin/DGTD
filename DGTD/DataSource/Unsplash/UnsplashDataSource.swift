@@ -8,5 +8,5 @@
 import Combine
 
 protocol UnsplashDataSource {
-    func getPhotos() -> AnyPublisher<Unsplash, Error>
+    func getPhotos() -> AnyPublisher<[Unsplash], Error>
 }

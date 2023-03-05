@@ -12,7 +12,7 @@ final class UnsplashRepository {
     
     private init() {}
     
-    func getPhotos(datasource: UnsplashDataSource) -> AnyPublisher<Unsplash, Error> {
+    func getPhotos(datasource: UnsplashDataSource) -> AnyPublisher<[Unsplash], Error> {
         return datasource.getPhotos()
     }
 }

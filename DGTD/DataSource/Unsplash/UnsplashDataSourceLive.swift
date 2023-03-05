@@ -8,13 +8,13 @@
 import Combine
 import Foundation
 
-final class UnsplashDataSourceLive {
+final class UnsplashDataSourceLive: UnsplashDataSource {
     
     static let shared = UnsplashDataSourceLive()
     
     private init() {}
     
-    func getPhotos() -> AnyPublisher<Unsplash, Error> {
+    func getPhotos() -> AnyPublisher<[Unsplash], Error> {
         guard let url = URL(string: "https://api.unsplash.com/photos") else {
             return Fail(error: URLError(.badURL)).eraseToAnyPublisher()
         }
@@ -28,7 +28,7 @@ final class UnsplashDataSourceLive {
                 }
                 return data
             }
-            .decode(type: Unsplash.self, decoder: JSONDecoder())
+            .decode(type: [Unsplash].self, decoder: JSONDecoder())
             .eraseToAnyPublisher()
     }
     

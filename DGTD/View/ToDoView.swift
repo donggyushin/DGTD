@@ -20,7 +20,6 @@ struct ToDoView: View {
                         .aspectRatio(contentMode: .fill)
                 }
                 Text("Hello, world!")
-                
             } else {
                 Text("Hello, world!")
             }

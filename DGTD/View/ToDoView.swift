@@ -19,10 +19,8 @@ struct ToDoView: View {
                     image
                         .aspectRatio(contentMode: .fill)
                 }
-                Text("Hello, world!")
-            } else {
-                Text("Hello, world!")
             }
+            Text("Hello, world!")
         }
         .ignoresSafeArea(.all)
         

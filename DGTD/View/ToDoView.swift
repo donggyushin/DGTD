@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ToDoView: View {
+    
+    @ObservedObject var viewModel: ToDoViewModel = .init()
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -21,6 +24,6 @@ struct ToDoView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ToDoView()
+        ToDoView().preferredColorScheme(.dark)
     }
 }

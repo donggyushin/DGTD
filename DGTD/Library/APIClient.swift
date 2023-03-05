@@ -13,7 +13,7 @@ let AC = APIClient()
 final class APIClient {
     fileprivate init() { }
     
-    func requestGet<T: Decodable>(url: String, headers: [Header]) -> AnyPublisher<T, Error> {
+    func get<T: Decodable>(url: String, headers: [Header]) -> AnyPublisher<T, Error> {
         guard let url = URL(string: url) else {
             return Fail(error: URLError(.badURL)).eraseToAnyPublisher()
         }

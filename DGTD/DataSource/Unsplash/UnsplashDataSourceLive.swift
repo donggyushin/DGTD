@@ -15,11 +15,11 @@ final class UnsplashDataSourceLive: UnsplashDataSource {
     private init() {}
     
     func getPhotos() -> AnyPublisher<[Unsplash], Error> {
-        return AC.requestGet(url: "https://api.unsplash.com/photos", headers: [.unsplash])
+        return AC.get(url: "https://api.unsplash.com/photos", headers: [.unsplash])
     }
     
     func getPhoto() -> AnyPublisher<Unsplash, Error> {
-        return AC.requestGet(url: "https://api.unsplash.com/photos/random", headers: [.unsplash])
+        return AC.get(url: "https://api.unsplash.com/photos/random", headers: [.unsplash])
     }
     
 }

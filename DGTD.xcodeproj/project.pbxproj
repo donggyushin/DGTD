@@ -12,6 +12,7 @@
 		704B8DF429B460EE0084D31A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 704B8DF329B460EE0084D31A /* Assets.xcassets */; };
 		704B8DF729B460EE0084D31A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 704B8DF629B460EE0084D31A /* Preview Assets.xcassets */; };
 		704B8E0429B4642D0084D31A /* ToDoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B8E0329B4642D0084D31A /* ToDoViewModel.swift */; };
+		704B8E0629B465E40084D31A /* secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B8E0529B465E40084D31A /* secret.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		704B8DF329B460EE0084D31A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		704B8DF629B460EE0084D31A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		704B8E0329B4642D0084D31A /* ToDoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewModel.swift; sourceTree = "<group>"; };
+		704B8E0529B465E40084D31A /* secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secret.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				704B8DFD29B462D20084D31A /* Repository */,
 				704B8E0129B462F10084D31A /* View */,
 				704B8DEF29B460ED0084D31A /* DGTDApp.swift */,
+				704B8E0529B465E40084D31A /* secret.swift */,
 				704B8DF329B460EE0084D31A /* Assets.xcassets */,
 				704B8DF529B460EE0084D31A /* Preview Content */,
 			);
@@ -181,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				704B8DF229B460ED0084D31A /* ToDoView.swift in Sources */,
+				704B8E0629B465E40084D31A /* secret.swift in Sources */,
 				704B8E0429B4642D0084D31A /* ToDoViewModel.swift in Sources */,
 				704B8DF029B460ED0084D31A /* DGTDApp.swift in Sources */,
 			);

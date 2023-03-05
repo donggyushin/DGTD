@@ -23,7 +23,7 @@ class ToDoViewModel: ObservableObject {
     }
     
     private func fetchPhoto() {
-        unsplashRepository.getPhotos(datasource: unsplashDatasource)
+        unsplashRepository.getPhoto(datasource: unsplashDatasource)
             .sink { completion in
                 switch completion {
                 case .failure(let error):
@@ -31,8 +31,8 @@ class ToDoViewModel: ObservableObject {
                 case .finished:
                     print("dg: finish")
                 }
-            } receiveValue: { unsplashs in
-                print("dg: unsplash: \(unsplashs)")
+            } receiveValue: { unsplash in
+                print("dg: unsplash: \(unsplash)")
             }
             .store(in: &cancellables)
 

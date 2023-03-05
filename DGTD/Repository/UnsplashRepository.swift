@@ -15,4 +15,8 @@ final class UnsplashRepository {
     func getPhotos(datasource: UnsplashDataSource) -> AnyPublisher<[Unsplash], Error> {
         return datasource.getPhotos()
     }
+    
+    func getPhoto(datasource: UnsplashDataSource) -> AnyPublisher<Unsplash, Error> {
+        return datasource.getPhoto()
+    }
 }

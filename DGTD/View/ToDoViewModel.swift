@@ -10,20 +10,20 @@ import Combine
 class ToDoViewModel: ObservableObject {
     
     private let unsplashRepository: UnsplashRepository
-    private let unsplashDatasource: UnsplashDataSource
+    private let unsplashServer: UnsplashServer
     
     private var cancellables: Set<AnyCancellable> = []
     
     init(unsplashRepository: UnsplashRepository,
-         unsplashDatasource: UnsplashDataSource) {
+         unsplashServer: UnsplashServer) {
         self.unsplashRepository = unsplashRepository
-        self.unsplashDatasource = unsplashDatasource
+        self.unsplashServer = unsplashServer
         
         fetchPhoto()
     }
     
     private func fetchPhoto() {
-        unsplashRepository.getPhoto(datasource: unsplashDatasource)
+        unsplashRepository.getPhoto(datasource: unsplashServer)
             .sink { completion in
                 switch completion {
                 case .failure(let error):

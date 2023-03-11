@@ -12,7 +12,7 @@ struct ToDoView: View {
     @ObservedObject var viewModel: ToDoViewModel
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack {
                 if let urlString = viewModel.imageUrl, let url = URL(string: urlString) {
                     BackgroundView(url: url)
@@ -27,12 +27,9 @@ struct ToDoView: View {
                     Spacer()
                     QuoteView(quote: $viewModel.quote)
                 }
-                
-                if viewModel.shouldLogin {
-                    NavigationLink(destination: AuthView()) {
-                        EmptyView()
-                    }
-                }
+            }
+            .navigationDestination(isPresented: $viewModel.shouldLogin) {
+                AuthView()
             }
         }
     }

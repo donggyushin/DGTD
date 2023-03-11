@@ -12,8 +12,8 @@ class ToDoViewModel: ObservableObject {
     
     private let defaultImageUrl = "https://images.unsplash.com/photo-1417325384643-aac51acc9e5d?q=75&fm=jpg"
     
-    @Published private(set) var imageUrl: String?
     @Published var todoText: String = ""
+    @Published private(set) var imageUrl: String?
     
     private let unsplashRepository: UnsplashRepository
     private let unsplashServer: UnsplashServer

@@ -17,16 +17,16 @@ class ToDoViewModel: ObservableObject {
     @Published private(set) var imageUrl: String?
     
     private let unsplashRepository: UnsplashRepository
-    private let unsplashServer: UnsplashServer
+    private let unsplashServer: UnsplashDataSource
     private let quotesRepository: QuotesRepository
-    private let quotesServer: QuotesServer
+    private let quotesServer: QuotesDataSource
     
     private var cancellables: Set<AnyCancellable> = []
     
     init(unsplashRepository: UnsplashRepository,
-         unsplashServer: UnsplashServer,
+         unsplashServer: UnsplashDataSource,
          quotesRepository: QuotesRepository,
-         quotesServer: QuotesServer
+         quotesServer: QuotesDataSource
     ) {
         self.unsplashRepository = unsplashRepository
         self.unsplashServer = unsplashServer

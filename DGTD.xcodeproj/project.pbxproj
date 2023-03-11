@@ -21,6 +21,8 @@
 		707F22CB29BCB414003429AA /* QuotesServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F22CA29BCB414003429AA /* QuotesServer.swift */; };
 		707F22CD29BCB48D003429AA /* QuotesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F22CC29BCB48D003429AA /* QuotesRepository.swift */; };
 		707F22CF29BCB4E0003429AA /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F22CE29BCB4E0003429AA /* QuoteView.swift */; };
+		707F22D129BCB791003429AA /* QuotesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F22D029BCB791003429AA /* QuotesDataSource.swift */; };
+		707F22D329BCB7B2003429AA /* UnsplashDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F22D229BCB7B2003429AA /* UnsplashDataSource.swift */; };
 		70A7184129BCA82200BED2E1 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A7184029BCA82200BED2E1 /* BackgroundView.swift */; };
 		70A7184329BCA8A800BED2E1 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A7184229BCA8A800BED2E1 /* InputView.swift */; };
 /* End PBXBuildFile section */
@@ -41,6 +43,8 @@
 		707F22CA29BCB414003429AA /* QuotesServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesServer.swift; sourceTree = "<group>"; };
 		707F22CC29BCB48D003429AA /* QuotesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesRepository.swift; sourceTree = "<group>"; };
 		707F22CE29BCB4E0003429AA /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
+		707F22D029BCB791003429AA /* QuotesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesDataSource.swift; sourceTree = "<group>"; };
+		707F22D229BCB7B2003429AA /* UnsplashDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashDataSource.swift; sourceTree = "<group>"; };
 		70A7184029BCA82200BED2E1 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		70A7184229BCA8A800BED2E1 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,6 +149,7 @@
 		704B8E0A29B469E70084D31A /* Unsplash */ = {
 			isa = PBXGroup;
 			children = (
+				707F22D229BCB7B2003429AA /* UnsplashDataSource.swift */,
 				704B8E1329B4CAD60084D31A /* UnsplashServer.swift */,
 			);
 			path = Unsplash;
@@ -162,6 +167,7 @@
 		707F22C929BCB407003429AA /* Quotes */ = {
 			isa = PBXGroup;
 			children = (
+				707F22D029BCB791003429AA /* QuotesDataSource.swift */,
 				707F22CA29BCB414003429AA /* QuotesServer.swift */,
 			);
 			path = Quotes;
@@ -253,7 +259,9 @@
 				704B8E1829B4CB310084D31A /* UnsplashRepository.swift in Sources */,
 				704B8E1A29B4CED20084D31A /* APIClient.swift in Sources */,
 				707F22CF29BCB4E0003429AA /* QuoteView.swift in Sources */,
+				707F22D329BCB7B2003429AA /* UnsplashDataSource.swift in Sources */,
 				707F22C829BCB303003429AA /* Quote.swift in Sources */,
+				707F22D129BCB791003429AA /* QuotesDataSource.swift in Sources */,
 				707F22CD29BCB48D003429AA /* QuotesRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

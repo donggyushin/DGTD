@@ -7,7 +7,7 @@
 
 import Combine
 
-final class QuotesServer {
+final class QuotesServer: QuotesDataSource {
     static let shared = QuotesServer()
     
     private init() { }

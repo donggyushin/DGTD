@@ -12,7 +12,7 @@ final class QuotesRepository {
     
     private init() {}
     
-    func getQuates(datasource: QuotesServer) -> AnyPublisher<Quotes, Error> {
+    func getQuates(datasource: QuotesDataSource) -> AnyPublisher<Quotes, Error> {
         return datasource.getQuates()
     }
 }

@@ -137,11 +137,7 @@
 		704B8E0129B462F10084D31A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				70A7184029BCA82200BED2E1 /* BackgroundView.swift */,
-				70A7184229BCA8A800BED2E1 /* InputView.swift */,
-				704B8DF129B460ED0084D31A /* ToDoView.swift */,
-				704B8E0329B4642D0084D31A /* ToDoViewModel.swift */,
-				707F22CE29BCB4E0003429AA /* QuoteView.swift */,
+				707F22D429BCB82E003429AA /* Todo */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -171,6 +167,18 @@
 				707F22CA29BCB414003429AA /* QuotesServer.swift */,
 			);
 			path = Quotes;
+			sourceTree = "<group>";
+		};
+		707F22D429BCB82E003429AA /* Todo */ = {
+			isa = PBXGroup;
+			children = (
+				70A7184029BCA82200BED2E1 /* BackgroundView.swift */,
+				70A7184229BCA8A800BED2E1 /* InputView.swift */,
+				704B8DF129B460ED0084D31A /* ToDoView.swift */,
+				704B8E0329B4642D0084D31A /* ToDoViewModel.swift */,
+				707F22CE29BCB4E0003429AA /* QuoteView.swift */,
+			);
+			path = Todo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

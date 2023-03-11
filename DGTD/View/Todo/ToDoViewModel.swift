@@ -15,6 +15,7 @@ class ToDoViewModel: ObservableObject {
     @Published var todoText: String = ""
     @Published var quote: Quotes.Quote?
     @Published private(set) var imageUrl: String?
+    @Published private(set) var shouldLogin = false
     
     private let unsplashRepository: UnsplashRepository
     private let unsplashServer: UnsplashDataSource
@@ -38,6 +39,12 @@ class ToDoViewModel: ObservableObject {
     }
     
     func onSubmit() {
+        
+        if !store.user.isLogin {
+            shouldLogin = true
+            return
+        }
+        
         saveTodo()
     }
     

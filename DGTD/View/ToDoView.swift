@@ -14,18 +14,14 @@ struct ToDoView: View {
     var body: some View {
         ZStack {
             if let urlString = viewModel.imageUrl, let url = URL(string: urlString) {
-                AsyncImage(url: url) { image in
-                    image.resizable()
-                } placeholder: {
-                    Color(UIColor.systemBackground)
-                }
-                .scaledToFill()
-                .edgesIgnoringSafeArea(.all)
+                BackgroundView(url: url)
             }
             
             ScrollView {
-                Text("Hello World")
+                InputView(inputText: $viewModel.todoText, onSubmit: viewModel.onSubmit)
             }
+            .padding(.horizontal, 20)
+            
         }
     }
 }

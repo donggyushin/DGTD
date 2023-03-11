@@ -17,8 +17,8 @@
 		704B8E1429B4CAD60084D31A /* UnsplashServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B8E1329B4CAD60084D31A /* UnsplashServer.swift */; };
 		704B8E1829B4CB310084D31A /* UnsplashRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B8E1729B4CB310084D31A /* UnsplashRepository.swift */; };
 		704B8E1A29B4CED20084D31A /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B8E1929B4CED20084D31A /* APIClient.swift */; };
-		704B8E1D29B4D3F70084D31A /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 704B8E1C29B4D3F70084D31A /* URLImage */; };
-		704B8E1F29B4D3F70084D31A /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = 704B8E1E29B4D3F70084D31A /* URLImageStore */; };
+		70A7184129BCA82200BED2E1 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A7184029BCA82200BED2E1 /* BackgroundView.swift */; };
+		70A7184329BCA8A800BED2E1 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A7184229BCA8A800BED2E1 /* InputView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +33,8 @@
 		704B8E1329B4CAD60084D31A /* UnsplashServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashServer.swift; sourceTree = "<group>"; };
 		704B8E1729B4CB310084D31A /* UnsplashRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashRepository.swift; sourceTree = "<group>"; };
 		704B8E1929B4CED20084D31A /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		70A7184029BCA82200BED2E1 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		70A7184229BCA8A800BED2E1 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,8 +42,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				704B8E1F29B4D3F70084D31A /* URLImageStore in Frameworks */,
-				704B8E1D29B4D3F70084D31A /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +123,8 @@
 		704B8E0129B462F10084D31A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				70A7184029BCA82200BED2E1 /* BackgroundView.swift */,
+				70A7184229BCA8A800BED2E1 /* InputView.swift */,
 				704B8DF129B460ED0084D31A /* ToDoView.swift */,
 				704B8E0329B4642D0084D31A /* ToDoViewModel.swift */,
 			);
@@ -162,8 +164,6 @@
 			);
 			name = DGTD;
 			packageProductDependencies = (
-				704B8E1C29B4D3F70084D31A /* URLImage */,
-				704B8E1E29B4D3F70084D31A /* URLImageStore */,
 			);
 			productName = DGTD;
 			productReference = 704B8DEC29B460ED0084D31A /* DGTD.app */;
@@ -194,7 +194,6 @@
 			);
 			mainGroup = 704B8DE329B460ED0084D31A;
 			packageReferences = (
-				704B8E1B29B4D3F70084D31A /* XCRemoteSwiftPackageReference "url-image" */,
 			);
 			productRefGroup = 704B8DED29B460ED0084D31A /* Products */;
 			projectDirPath = "";
@@ -222,12 +221,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70A7184129BCA82200BED2E1 /* BackgroundView.swift in Sources */,
 				704B8E1429B4CAD60084D31A /* UnsplashServer.swift in Sources */,
 				704B8E1229B4C8320084D31A /* Unsplash.swift in Sources */,
 				704B8DF229B460ED0084D31A /* ToDoView.swift in Sources */,
 				704B8E0629B465E40084D31A /* secret.swift in Sources */,
 				704B8E0429B4642D0084D31A /* ToDoViewModel.swift in Sources */,
 				704B8DF029B460ED0084D31A /* DGTDApp.swift in Sources */,
+				70A7184329BCA8A800BED2E1 /* InputView.swift in Sources */,
 				704B8E1829B4CB310084D31A /* UnsplashRepository.swift in Sources */,
 				704B8E1A29B4CED20084D31A /* APIClient.swift in Sources */,
 			);
@@ -430,30 +431,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		704B8E1B29B4D3F70084D31A /* XCRemoteSwiftPackageReference "url-image" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		704B8E1C29B4D3F70084D31A /* URLImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 704B8E1B29B4D3F70084D31A /* XCRemoteSwiftPackageReference "url-image" */;
-			productName = URLImage;
-		};
-		704B8E1E29B4D3F70084D31A /* URLImageStore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 704B8E1B29B4D3F70084D31A /* XCRemoteSwiftPackageReference "url-image" */;
-			productName = URLImageStore;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 704B8DE429B460ED0084D31A /* Project object */;
 }

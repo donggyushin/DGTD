@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import URLImage
 
 struct ToDoView: View {
     
@@ -15,17 +14,15 @@ struct ToDoView: View {
     var body: some View {
         ZStack {
             if let urlString = viewModel.imageUrl, let url = URL(string: urlString) {
-                URLImage(url) { image, info in
-                    image
-                        .aspectRatio(contentMode: .fill)
-                }
-                Text("Hello, world!")
-            } else {
-                Text("Hello, world!")
+                BackgroundView(url: url)
             }
+            
+            ScrollView {
+                InputView(inputText: $viewModel.todoText, onSubmit: viewModel.onSubmit)
+            }
+            .padding(.horizontal, 20)
+            
         }
-        .ignoresSafeArea(.all)
-        
     }
 }
 

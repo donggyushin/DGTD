@@ -12,21 +12,28 @@ struct ToDoView: View {
     @ObservedObject var viewModel: ToDoViewModel
     
     var body: some View {
-        ZStack {
-            if let urlString = viewModel.imageUrl, let url = URL(string: urlString) {
-                BackgroundView(url: url)
+        NavigationView {
+            ZStack {
+                if let urlString = viewModel.imageUrl, let url = URL(string: urlString) {
+                    BackgroundView(url: url)
+                }
+                
+                ScrollView {
+                    InputView(inputText: $viewModel.todoText, onSubmit: viewModel.onSubmit)
+                }
+                .padding(.horizontal, 20)
+                
+                VStack {
+                    Spacer()
+                    QuoteView(quote: $viewModel.quote)
+                }
+                
+                if viewModel.shouldLogin {
+                    NavigationLink(destination: AuthView()) {
+                        EmptyView()
+                    }
+                }
             }
-            
-            ScrollView {
-                InputView(inputText: $viewModel.todoText, onSubmit: viewModel.onSubmit)
-            }
-            .padding(.horizontal, 20)
-            
-            VStack {
-                Spacer()
-                QuoteView(quote: $viewModel.quote)
-            }
-            
         }
     }
 }

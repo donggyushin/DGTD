@@ -26,6 +26,9 @@
 		707F22D629BCB8BC003429AA /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F22D529BCB8BC003429AA /* DependencyInjection.swift */; };
 		707F22D929BCBA5A003429AA /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F22D829BCBA5A003429AA /* UserStore.swift */; };
 		707F22DB29BCBA94003429AA /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F22DA29BCBA94003429AA /* Store.swift */; };
+		707F22DE29BCBB29003429AA /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F22DD29BCBB29003429AA /* AuthView.swift */; };
+		707F22E029BCBB5B003429AA /* AppleSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F22DF29BCBB5B003429AA /* AppleSignInButton.swift */; };
+		707F22E329BCBBBE003429AA /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707F22E229BCBBBE003429AA /* AuthenticationServices.framework */; };
 		70A7184129BCA82200BED2E1 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A7184029BCA82200BED2E1 /* BackgroundView.swift */; };
 		70A7184329BCA8A800BED2E1 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A7184229BCA8A800BED2E1 /* InputView.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +54,9 @@
 		707F22D529BCB8BC003429AA /* DependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
 		707F22D829BCBA5A003429AA /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
 		707F22DA29BCBA94003429AA /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		707F22DD29BCBB29003429AA /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		707F22DF29BCBB5B003429AA /* AppleSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInButton.swift; sourceTree = "<group>"; };
+		707F22E229BCBBBE003429AA /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		70A7184029BCA82200BED2E1 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		70A7184229BCA8A800BED2E1 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -60,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				707F22E329BCBBBE003429AA /* AuthenticationServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +78,7 @@
 			children = (
 				704B8DEE29B460ED0084D31A /* DGTD */,
 				704B8DED29B460ED0084D31A /* Products */,
+				707F22E129BCBBBE003429AA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,6 +153,7 @@
 		704B8E0129B462F10084D31A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				707F22DC29BCBB20003429AA /* Auth */,
 				707F22D429BCB82E003429AA /* Todo */,
 			);
 			path = View;
@@ -196,6 +205,23 @@
 				707F22D829BCBA5A003429AA /* UserStore.swift */,
 			);
 			path = Store;
+			sourceTree = "<group>";
+		};
+		707F22DC29BCBB20003429AA /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				707F22DF29BCBB5B003429AA /* AppleSignInButton.swift */,
+				707F22DD29BCBB29003429AA /* AuthView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		707F22E129BCBBBE003429AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				707F22E229BCBBBE003429AA /* AuthenticationServices.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,8 +302,10 @@
 				704B8E1429B4CAD60084D31A /* UnsplashServer.swift in Sources */,
 				704B8E1229B4C8320084D31A /* Unsplash.swift in Sources */,
 				707F22D629BCB8BC003429AA /* DependencyInjection.swift in Sources */,
+				707F22E029BCBB5B003429AA /* AppleSignInButton.swift in Sources */,
 				704B8DF229B460ED0084D31A /* ToDoView.swift in Sources */,
 				704B8E0629B465E40084D31A /* secret.swift in Sources */,
+				707F22DE29BCBB29003429AA /* AuthView.swift in Sources */,
 				707F22D929BCBA5A003429AA /* UserStore.swift in Sources */,
 				707F22CB29BCB414003429AA /* QuotesServer.swift in Sources */,
 				704B8E0429B4642D0084D31A /* ToDoViewModel.swift in Sources */,

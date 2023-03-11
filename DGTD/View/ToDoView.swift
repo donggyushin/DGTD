@@ -9,7 +9,12 @@ import SwiftUI
 
 struct ToDoView: View {
     
-    @ObservedObject var viewModel: ToDoViewModel = .init(unsplashRepository: UnsplashRepository.shared, unsplashServer: UnsplashServer.shared)
+    @ObservedObject var viewModel: ToDoViewModel =
+        .init(unsplashRepository: UnsplashRepository.shared,
+              unsplashServer: UnsplashServer.shared,
+              quotesRepository: QuotesRepository.shared,
+              quotesServer: QuotesServer.shared
+        )
     
     var body: some View {
         ZStack {
@@ -21,6 +26,11 @@ struct ToDoView: View {
                 InputView(inputText: $viewModel.todoText, onSubmit: viewModel.onSubmit)
             }
             .padding(.horizontal, 20)
+            
+            VStack {
+                Spacer()
+                QuoteView(quote: $viewModel.quote)
+            }
             
         }
     }

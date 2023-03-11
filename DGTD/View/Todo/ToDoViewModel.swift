@@ -10,12 +10,16 @@ import Foundation
 
 class ToDoViewModel: ObservableObject {
     
+    enum NavigationPath {
+        case auth
+    }
+    
     private let defaultImageUrl = "https://images.unsplash.com/photo-1417325384643-aac51acc9e5d?q=75&fm=jpg"
     
     @Published var todoText: String = ""
+    @Published var imageUrl: String?
     @Published var quote: Quotes.Quote?
-    @Published private(set) var imageUrl: String?
-    @Published var shouldLogin = false
+    @Published var navigationPaths: [NavigationPath] = []
     
     private let unsplashRepository: UnsplashRepository
     private let unsplashServer: UnsplashDataSource
@@ -41,7 +45,9 @@ class ToDoViewModel: ObservableObject {
     func onSubmit() {
         
         if !store.user.isLogin {
-            shouldLogin = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.navigationPaths = [.auth]
+            }
             return
         }
         

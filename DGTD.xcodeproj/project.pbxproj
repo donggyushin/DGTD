@@ -17,6 +17,18 @@
 		704B8E1429B4CAD60084D31A /* UnsplashServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B8E1329B4CAD60084D31A /* UnsplashServer.swift */; };
 		704B8E1829B4CB310084D31A /* UnsplashRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B8E1729B4CB310084D31A /* UnsplashRepository.swift */; };
 		704B8E1A29B4CED20084D31A /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B8E1929B4CED20084D31A /* APIClient.swift */; };
+		707F22C829BCB303003429AA /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F22C729BCB303003429AA /* Quote.swift */; };
+		707F22CB29BCB414003429AA /* QuotesServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F22CA29BCB414003429AA /* QuotesServer.swift */; };
+		707F22CD29BCB48D003429AA /* QuotesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F22CC29BCB48D003429AA /* QuotesRepository.swift */; };
+		707F22CF29BCB4E0003429AA /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F22CE29BCB4E0003429AA /* QuoteView.swift */; };
+		707F22D129BCB791003429AA /* QuotesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F22D029BCB791003429AA /* QuotesDataSource.swift */; };
+		707F22D329BCB7B2003429AA /* UnsplashDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F22D229BCB7B2003429AA /* UnsplashDataSource.swift */; };
+		707F22D629BCB8BC003429AA /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F22D529BCB8BC003429AA /* DependencyInjection.swift */; };
+		707F22D929BCBA5A003429AA /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F22D829BCBA5A003429AA /* UserStore.swift */; };
+		707F22DB29BCBA94003429AA /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F22DA29BCBA94003429AA /* Store.swift */; };
+		707F22DE29BCBB29003429AA /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F22DD29BCBB29003429AA /* AuthView.swift */; };
+		707F22E029BCBB5B003429AA /* AppleSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F22DF29BCBB5B003429AA /* AppleSignInButton.swift */; };
+		707F22E329BCBBBE003429AA /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707F22E229BCBBBE003429AA /* AuthenticationServices.framework */; };
 		70A7184129BCA82200BED2E1 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A7184029BCA82200BED2E1 /* BackgroundView.swift */; };
 		70A7184329BCA8A800BED2E1 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A7184229BCA8A800BED2E1 /* InputView.swift */; };
 /* End PBXBuildFile section */
@@ -33,6 +45,18 @@
 		704B8E1329B4CAD60084D31A /* UnsplashServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashServer.swift; sourceTree = "<group>"; };
 		704B8E1729B4CB310084D31A /* UnsplashRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashRepository.swift; sourceTree = "<group>"; };
 		704B8E1929B4CED20084D31A /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		707F22C729BCB303003429AA /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		707F22CA29BCB414003429AA /* QuotesServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesServer.swift; sourceTree = "<group>"; };
+		707F22CC29BCB48D003429AA /* QuotesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesRepository.swift; sourceTree = "<group>"; };
+		707F22CE29BCB4E0003429AA /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
+		707F22D029BCB791003429AA /* QuotesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesDataSource.swift; sourceTree = "<group>"; };
+		707F22D229BCB7B2003429AA /* UnsplashDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashDataSource.swift; sourceTree = "<group>"; };
+		707F22D529BCB8BC003429AA /* DependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
+		707F22D829BCBA5A003429AA /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
+		707F22DA29BCBA94003429AA /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		707F22DD29BCBB29003429AA /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		707F22DF29BCBB5B003429AA /* AppleSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInButton.swift; sourceTree = "<group>"; };
+		707F22E229BCBBBE003429AA /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		70A7184029BCA82200BED2E1 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		70A7184229BCA8A800BED2E1 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -42,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				707F22E329BCBBBE003429AA /* AuthenticationServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +78,7 @@
 			children = (
 				704B8DEE29B460ED0084D31A /* DGTD */,
 				704B8DED29B460ED0084D31A /* Products */,
+				707F22E129BCBBBE003429AA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +98,7 @@
 				704B8DFF29B462E40084D31A /* Library */,
 				704B8E0D29B4C6500084D31A /* Model */,
 				704B8DFD29B462D20084D31A /* Repository */,
+				707F22D729BCBA4F003429AA /* Store */,
 				704B8E0129B462F10084D31A /* View */,
 				704B8DEF29B460ED0084D31A /* DGTDApp.swift */,
 				704B8E0529B465E40084D31A /* secret.swift */,
@@ -93,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				704B8E1729B4CB310084D31A /* UnsplashRepository.swift */,
+				707F22CC29BCB48D003429AA /* QuotesRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -100,6 +128,7 @@
 		704B8DFE29B462DB0084D31A /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				707F22C929BCB407003429AA /* Quotes */,
 				704B8E0A29B469E70084D31A /* Unsplash */,
 			);
 			path = DataSource;
@@ -116,6 +145,7 @@
 		704B8E0029B462EB0084D31A /* DI */ = {
 			isa = PBXGroup;
 			children = (
+				707F22D529BCB8BC003429AA /* DependencyInjection.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -123,10 +153,8 @@
 		704B8E0129B462F10084D31A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				70A7184029BCA82200BED2E1 /* BackgroundView.swift */,
-				70A7184229BCA8A800BED2E1 /* InputView.swift */,
-				704B8DF129B460ED0084D31A /* ToDoView.swift */,
-				704B8E0329B4642D0084D31A /* ToDoViewModel.swift */,
+				707F22DC29BCBB20003429AA /* Auth */,
+				707F22D429BCB82E003429AA /* Todo */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -134,6 +162,7 @@
 		704B8E0A29B469E70084D31A /* Unsplash */ = {
 			isa = PBXGroup;
 			children = (
+				707F22D229BCB7B2003429AA /* UnsplashDataSource.swift */,
 				704B8E1329B4CAD60084D31A /* UnsplashServer.swift */,
 			);
 			path = Unsplash;
@@ -143,8 +172,56 @@
 			isa = PBXGroup;
 			children = (
 				704B8E1129B4C8320084D31A /* Unsplash.swift */,
+				707F22C729BCB303003429AA /* Quote.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		707F22C929BCB407003429AA /* Quotes */ = {
+			isa = PBXGroup;
+			children = (
+				707F22D029BCB791003429AA /* QuotesDataSource.swift */,
+				707F22CA29BCB414003429AA /* QuotesServer.swift */,
+			);
+			path = Quotes;
+			sourceTree = "<group>";
+		};
+		707F22D429BCB82E003429AA /* Todo */ = {
+			isa = PBXGroup;
+			children = (
+				70A7184029BCA82200BED2E1 /* BackgroundView.swift */,
+				70A7184229BCA8A800BED2E1 /* InputView.swift */,
+				704B8DF129B460ED0084D31A /* ToDoView.swift */,
+				704B8E0329B4642D0084D31A /* ToDoViewModel.swift */,
+				707F22CE29BCB4E0003429AA /* QuoteView.swift */,
+			);
+			path = Todo;
+			sourceTree = "<group>";
+		};
+		707F22D729BCBA4F003429AA /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				707F22DA29BCBA94003429AA /* Store.swift */,
+				707F22D829BCBA5A003429AA /* UserStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		707F22DC29BCBB20003429AA /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				707F22DF29BCBB5B003429AA /* AppleSignInButton.swift */,
+				707F22DD29BCBB29003429AA /* AuthView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		707F22E129BCBBBE003429AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				707F22E229BCBBBE003429AA /* AuthenticationServices.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,13 +301,24 @@
 				70A7184129BCA82200BED2E1 /* BackgroundView.swift in Sources */,
 				704B8E1429B4CAD60084D31A /* UnsplashServer.swift in Sources */,
 				704B8E1229B4C8320084D31A /* Unsplash.swift in Sources */,
+				707F22D629BCB8BC003429AA /* DependencyInjection.swift in Sources */,
+				707F22E029BCBB5B003429AA /* AppleSignInButton.swift in Sources */,
 				704B8DF229B460ED0084D31A /* ToDoView.swift in Sources */,
 				704B8E0629B465E40084D31A /* secret.swift in Sources */,
+				707F22DE29BCBB29003429AA /* AuthView.swift in Sources */,
+				707F22D929BCBA5A003429AA /* UserStore.swift in Sources */,
+				707F22CB29BCB414003429AA /* QuotesServer.swift in Sources */,
 				704B8E0429B4642D0084D31A /* ToDoViewModel.swift in Sources */,
 				704B8DF029B460ED0084D31A /* DGTDApp.swift in Sources */,
 				70A7184329BCA8A800BED2E1 /* InputView.swift in Sources */,
 				704B8E1829B4CB310084D31A /* UnsplashRepository.swift in Sources */,
 				704B8E1A29B4CED20084D31A /* APIClient.swift in Sources */,
+				707F22CF29BCB4E0003429AA /* QuoteView.swift in Sources */,
+				707F22DB29BCBA94003429AA /* Store.swift in Sources */,
+				707F22D329BCB7B2003429AA /* UnsplashDataSource.swift in Sources */,
+				707F22C829BCB303003429AA /* Quote.swift in Sources */,
+				707F22D129BCB791003429AA /* QuotesDataSource.swift in Sources */,
+				707F22CD29BCB48D003429AA /* QuotesRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,7 +447,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DGTD/Preview Content\"";
-				DEVELOPMENT_TEAM = RTMQTS6F7G;
+				DEVELOPMENT_TEAM = YV58Q28W8Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -388,7 +476,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DGTD/Preview Content\"";
-				DEVELOPMENT_TEAM = RTMQTS6F7G;
+				DEVELOPMENT_TEAM = YV58Q28W8Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

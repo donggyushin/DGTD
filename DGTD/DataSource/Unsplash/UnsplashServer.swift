@@ -7,7 +7,7 @@
 
 import Combine
 
-final class UnsplashServer {
+final class UnsplashServer: UnsplashDataSource {
     
     static let shared = UnsplashServer()
     

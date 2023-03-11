@@ -11,7 +11,7 @@ import SwiftUI
 struct DGTDApp: App {
     var body: some Scene {
         WindowGroup {
-            ToDoView()
+            ToDoView(viewModel: DI.viewModel.toDo())
         }
     }
 }

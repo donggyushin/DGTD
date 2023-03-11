@@ -9,12 +9,7 @@ import SwiftUI
 
 struct ToDoView: View {
     
-    @ObservedObject var viewModel: ToDoViewModel =
-        .init(unsplashRepository: UnsplashRepository.shared,
-              unsplashServer: UnsplashServer.shared,
-              quotesRepository: QuotesRepository.shared,
-              quotesServer: QuotesServer.shared
-        )
+    @ObservedObject var viewModel: ToDoViewModel
     
     var body: some View {
         ZStack {
@@ -38,6 +33,6 @@ struct ToDoView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ToDoView().preferredColorScheme(.dark)
+        ToDoView(viewModel: DI.viewModel.toDo()).preferredColorScheme(.dark)
     }
 }

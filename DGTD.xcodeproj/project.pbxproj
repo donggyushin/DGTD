@@ -34,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		703EAE2329BCDE60007CE965 /* DGTD.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DGTD.entitlements; sourceTree = "<group>"; };
 		704B8DEC29B460ED0084D31A /* DGTD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DGTD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		704B8DEF29B460ED0084D31A /* DGTDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DGTDApp.swift; sourceTree = "<group>"; };
 		704B8DF129B460ED0084D31A /* ToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoView.swift; sourceTree = "<group>"; };
@@ -93,6 +94,7 @@
 		704B8DEE29B460ED0084D31A /* DGTD */ = {
 			isa = PBXGroup;
 			children = (
+				703EAE2329BCDE60007CE965 /* DGTD.entitlements */,
 				704B8DFE29B462DB0084D31A /* DataSource */,
 				704B8E0029B462EB0084D31A /* DI */,
 				704B8DFF29B462E40084D31A /* Library */,
@@ -444,6 +446,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DGTD/DGTD.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DGTD/Preview Content\"";
@@ -473,6 +476,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DGTD/DGTD.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DGTD/Preview Content\"";

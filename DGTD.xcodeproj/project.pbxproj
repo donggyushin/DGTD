@@ -18,6 +18,7 @@
 		704B8E1829B4CB310084D31A /* UnsplashRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B8E1729B4CB310084D31A /* UnsplashRepository.swift */; };
 		704B8E1A29B4CED20084D31A /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 704B8E1929B4CED20084D31A /* APIClient.swift */; };
 		707F22C829BCB303003429AA /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F22C729BCB303003429AA /* Quote.swift */; };
+		707F22CB29BCB414003429AA /* QuotesServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F22CA29BCB414003429AA /* QuotesServer.swift */; };
 		70A7184129BCA82200BED2E1 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A7184029BCA82200BED2E1 /* BackgroundView.swift */; };
 		70A7184329BCA8A800BED2E1 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A7184229BCA8A800BED2E1 /* InputView.swift */; };
 /* End PBXBuildFile section */
@@ -35,6 +36,7 @@
 		704B8E1729B4CB310084D31A /* UnsplashRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashRepository.swift; sourceTree = "<group>"; };
 		704B8E1929B4CED20084D31A /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		707F22C729BCB303003429AA /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		707F22CA29BCB414003429AA /* QuotesServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesServer.swift; sourceTree = "<group>"; };
 		70A7184029BCA82200BED2E1 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		70A7184229BCA8A800BED2E1 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +104,7 @@
 		704B8DFE29B462DB0084D31A /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				707F22C929BCB407003429AA /* Quotes */,
 				704B8E0A29B469E70084D31A /* Unsplash */,
 			);
 			path = DataSource;
@@ -148,6 +151,14 @@
 				707F22C729BCB303003429AA /* Quote.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		707F22C929BCB407003429AA /* Quotes */ = {
+			isa = PBXGroup;
+			children = (
+				707F22CA29BCB414003429AA /* QuotesServer.swift */,
+			);
+			path = Quotes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +240,7 @@
 				704B8E1229B4C8320084D31A /* Unsplash.swift in Sources */,
 				704B8DF229B460ED0084D31A /* ToDoView.swift in Sources */,
 				704B8E0629B465E40084D31A /* secret.swift in Sources */,
+				707F22CB29BCB414003429AA /* QuotesServer.swift in Sources */,
 				704B8E0429B4642D0084D31A /* ToDoViewModel.swift in Sources */,
 				704B8DF029B460ED0084D31A /* DGTDApp.swift in Sources */,
 				70A7184329BCA8A800BED2E1 /* InputView.swift in Sources */,

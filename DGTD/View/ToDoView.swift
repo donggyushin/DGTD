@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import URLImage
 
 struct ToDoView: View {
     
@@ -14,20 +13,20 @@ struct ToDoView: View {
     
     var body: some View {
         ZStack {
-            
             if let urlString = viewModel.imageUrl, let url = URL(string: urlString) {
-                URLImage(url) { image, info in
-                    image
-                        .aspectRatio(contentMode: .fill)
+                AsyncImage(url: url) { image in
+                    image.resizable()
+                } placeholder: {
+                    Color(UIColor.systemBackground)
                 }
+                .scaledToFill()
+                .edgesIgnoringSafeArea(.all)
             }
+            
             ScrollView {
-                Text("Why this text disappeared after image view rendered?")
-            }.padding(.top, 100)
-            
-            
+                Text("Hello World")
+            }
         }
-        .ignoresSafeArea(.all)
     }
 }
 

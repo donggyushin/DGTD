@@ -29,14 +29,16 @@ class ToDoViewModel: ObservableObject {
     
     private func fetchPhoto() {
         
-        unsplashRepository.getPhoto(datasource: unsplashServer)
-            .map({ $0.urls.full })
-            .replaceError(with: defaultImageUrl)
-            .receive(on: DispatchQueue.main)
-            .sink { fullUrl in
-                self.imageUrl = fullUrl
-            }
-            .store(in: &cancellables)
+        imageUrl = defaultImageUrl
+        
+//        unsplashRepository.getPhoto(datasource: unsplashServer)
+//            .map({ $0.urls.full })
+//            .replaceError(with: defaultImageUrl)
+//            .receive(on: DispatchQueue.main)
+//            .sink { fullUrl in
+//                self.imageUrl = fullUrl
+//            }
+//            .store(in: &cancellables)
     }
     
 }

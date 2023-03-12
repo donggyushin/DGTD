@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct AuthView: View {
+    
+    @ObservedObject var viewModel = DI.viewModel.auth()
+    
     var body: some View {
         VStack {
-            AppleSignInButton()
+            AppleSignInButton(completion: viewModel.signInWithAppleButtonCompletion)
                 .frame(height: 40)
         }
         .padding(.horizontal, 40)

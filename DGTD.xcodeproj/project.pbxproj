@@ -29,6 +29,7 @@
 		707F22DE29BCBB29003429AA /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F22DD29BCBB29003429AA /* AuthView.swift */; };
 		707F22E029BCBB5B003429AA /* AppleSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F22DF29BCBB5B003429AA /* AppleSignInButton.swift */; };
 		707F22E329BCBBBE003429AA /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 707F22E229BCBBBE003429AA /* AuthenticationServices.framework */; };
+		70A4622429BD7BC000E4071C /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A4622329BD7BC000E4071C /* AuthViewModel.swift */; };
 		70A7184129BCA82200BED2E1 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A7184029BCA82200BED2E1 /* BackgroundView.swift */; };
 		70A7184329BCA8A800BED2E1 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A7184229BCA8A800BED2E1 /* InputView.swift */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		707F22DD29BCBB29003429AA /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		707F22DF29BCBB5B003429AA /* AppleSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInButton.swift; sourceTree = "<group>"; };
 		707F22E229BCBBBE003429AA /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
+		70A4622329BD7BC000E4071C /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		70A7184029BCA82200BED2E1 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		70A7184229BCA8A800BED2E1 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -214,6 +216,7 @@
 			children = (
 				707F22DF29BCBB5B003429AA /* AppleSignInButton.swift */,
 				707F22DD29BCBB29003429AA /* AuthView.swift */,
+				70A4622329BD7BC000E4071C /* AuthViewModel.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				707F22CF29BCB4E0003429AA /* QuoteView.swift in Sources */,
 				707F22DB29BCBA94003429AA /* Store.swift in Sources */,
 				707F22D329BCB7B2003429AA /* UnsplashDataSource.swift in Sources */,
+				70A4622429BD7BC000E4071C /* AuthViewModel.swift in Sources */,
 				707F22C829BCB303003429AA /* Quote.swift in Sources */,
 				707F22D129BCB791003429AA /* QuotesDataSource.swift in Sources */,
 				707F22CD29BCB48D003429AA /* QuotesRepository.swift in Sources */,

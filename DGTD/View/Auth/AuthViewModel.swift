@@ -28,7 +28,7 @@ class AuthViewModel: ObservableObject {
                 let email = appleIDCredential.email
                 let IdentityToken = String(data: appleIDCredential.identityToken!, encoding: .utf8)
                 let AuthorizationCode = String(data: appleIDCredential.authorizationCode!, encoding: .utf8)
-                
+
                 print("dg: UserIdentifier: \(UserIdentifier)")
                 print("dg: fullName: \(fullName)")
                 print("dg: name: \(name)")

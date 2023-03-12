@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ToDoView: View {
     
-    @ObservedObject var viewModel: ToDoViewModel
+    @StateObject var viewModel: ToDoViewModel
     
     var body: some View {
         NavigationStack(path: $viewModel.navigationPaths) {
@@ -31,7 +31,7 @@ struct ToDoView: View {
             .navigationDestination(for: ToDoViewModel.NavigationPath.self) { path in
                 switch path {
                 case .auth:
-                    AuthView()
+                    AuthView(viewModel: DI.viewModel.auth())
                 }
             }
         }

@@ -6,20 +6,28 @@
 //
 
 import SwiftUI
+import Combine
 import AuthenticationServices
 
 struct AppleSignInButton: View {
+    
+    let firebaseAuth: FirebaseAuth
+    let completion: (Result<ASAuthorization, Error>) -> Void
+    
     var body: some View {
-        SignInWithAppleButton { request in
-            print("dg: request: \(request)")
-        } onCompletion: { result in
-            print("dg: result: \(result)")
-        }
+        SignInWithAppleButton(onRequest: { request in
+            request.nonce = firebaseAuth.sha256(firebaseAuth.getCurrentNonce())
+        }, onCompletion: completion)
     }
 }
 
 struct AppleSignInButton_Previews: PreviewProvider {
+    
+    static func completion(result: Result<ASAuthorization, Error>) {
+        print(result)
+    }
+    
     static var previews: some View {
-        AppleSignInButton().preferredColorScheme(.dark)
+        AppleSignInButton(firebaseAuth: FirebaseAuth.shared, completion: completion)
     }
 }

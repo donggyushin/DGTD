@@ -6,19 +6,21 @@
 //
 
 import SwiftUI
+import Combine
 
 struct AuthView: View {
     
     @Environment(\.dismiss) var dismiss
-    @State var shouldPop = false
+    
+    @StateObject var viewModel: AuthViewModel
     
     var body: some View {
         VStack {
-            AppleSignInButton(shouldPop: $shouldPop, firebaseAuth: FirebaseAuth.shared)
+            AppleSignInButton(firebaseAuth: FirebaseAuth.shared, completion: viewModel.AppleSignInCompletion)
                 .frame(height: 40)
         }
         .padding(.horizontal, 40)
-        .onChange(of: shouldPop) { newValue in
+        .onChange(of: viewModel.shouldPop) { newValue in
             if newValue {
                 dismiss()
             }
@@ -28,6 +30,6 @@ struct AuthView: View {
 
 struct AuthView_Previews: PreviewProvider {
     static var previews: some View {
-        AuthView().preferredColorScheme(.dark)
+        AuthView(viewModel: DI.viewModel.auth()).preferredColorScheme(.dark)
     }
 }

@@ -13,5 +13,13 @@ final class UserStore {
     
     @Published private(set) var isLogin = false
     
-    private init() { }
+    private init() {
+        bind()
+    }
+    
+    private func bind() {
+        FirebaseAuth.shared.addStateDidChangeListener { _, user in
+            self.isLogin = user != nil
+        }
+    }
 }

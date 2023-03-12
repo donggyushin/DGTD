@@ -27,7 +27,7 @@ extension DependencyInjection {
         }
         
         func auth() -> AuthViewModel {
-            AuthViewModel()
+            AuthViewModel(firebaseAuth: FirebaseAuth.shared)
         }
     }
 }

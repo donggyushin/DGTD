@@ -11,11 +11,12 @@ import AuthenticationServices
 struct AppleSignInButton: View {
     
     let completion: (Result<ASAuthorization, Error>) -> Void
+    let firebaseAuth: FirebaseAuth
     
     var body: some View {
         
         SignInWithAppleButton(onRequest: { request in
-            print("dg: request: \(request)")
+            request.nonce = firebaseAuth.sha256(firebaseAuth.getCurrentNonce())
         }, onCompletion: completion)
     }
 }
@@ -27,6 +28,6 @@ struct AppleSignInButton_Previews: PreviewProvider {
     }
     
     static var previews: some View {
-        AppleSignInButton(completion: completion).preferredColorScheme(.dark)
+        AppleSignInButton(completion: completion, firebaseAuth: FirebaseAuth.shared).preferredColorScheme(.dark)
     }
 }

@@ -13,7 +13,7 @@ struct AuthView: View {
     
     var body: some View {
         VStack {
-            AppleSignInButton(completion: viewModel.signInWithAppleButtonCompletion)
+            AppleSignInButton(completion: viewModel.signInWithAppleButtonCompletion, firebaseAuth: FirebaseAuth.shared)
                 .frame(height: 40)
         }
         .padding(.horizontal, 40)

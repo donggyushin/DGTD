@@ -9,14 +9,20 @@ import SwiftUI
 
 struct AuthView: View {
     
-    @ObservedObject var viewModel = DI.viewModel.auth()
+    @Environment(\.dismiss) var dismiss
+    @State var shouldPop = false
     
     var body: some View {
         VStack {
-            AppleSignInButton(completion: viewModel.signInWithAppleButtonCompletion, firebaseAuth: FirebaseAuth.shared)
+            AppleSignInButton(shouldPop: $shouldPop, firebaseAuth: FirebaseAuth.shared)
                 .frame(height: 40)
         }
         .padding(.horizontal, 40)
+        .onChange(of: shouldPop) { newValue in
+            if newValue {
+                dismiss()
+            }
+        }
     }
 }
 

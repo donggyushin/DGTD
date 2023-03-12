@@ -6,18 +6,42 @@
 //
 
 import SwiftUI
+import Combine
 import AuthenticationServices
 
 struct AppleSignInButton: View {
     
-    let completion: (Result<ASAuthorization, Error>) -> Void
+    @Binding var shouldPop: Bool
+    
     let firebaseAuth: FirebaseAuth
     
     var body: some View {
         
-        SignInWithAppleButton(onRequest: { request in
+        var cancellables: Set<AnyCancellable> = []
+        
+        SignInWithAppleButton { request in
             request.nonce = firebaseAuth.sha256(firebaseAuth.getCurrentNonce())
-        }, onCompletion: completion)
+        } onCompletion: { result in
+            switch result {
+            case .failure(let error):
+                print("dg: error: \(error)")
+            case .success(let authResults):
+                if let appleIDCredential = authResults.credential as? ASAuthorizationAppleIDCredential {
+                    firebaseAuth.signIn(appleIDCredential: appleIDCredential)
+                        .sink { completion in
+                            switch completion {
+                            case .failure(let error):
+                                print("dg: error: \(error.localizedDescription)")
+                            case .finished:
+                                break
+                            }
+                        } receiveValue: { result in
+                            self.shouldPop = true
+                        }
+                        .store(in: &cancellables)
+                }
+            }
+        }
     }
 }
 
@@ -28,6 +52,6 @@ struct AppleSignInButton_Previews: PreviewProvider {
     }
     
     static var previews: some View {
-        AppleSignInButton(completion: completion, firebaseAuth: FirebaseAuth.shared).preferredColorScheme(.dark)
+        AppleSignInButton(shouldPop: .constant(false), firebaseAuth: FirebaseAuth.shared).preferredColorScheme(.dark)
     }
 }

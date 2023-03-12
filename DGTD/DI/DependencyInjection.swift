@@ -25,9 +25,5 @@ extension DependencyInjection {
         func toDo() -> ToDoViewModel {
             ToDoViewModel(unsplashRepository: UnsplashRepository.shared, unsplashServer: UnsplashServer.shared, quotesRepository: QuotesRepository.shared, quotesServer: QuotesServer.shared)
         }
-        
-        func auth() -> AuthViewModel {
-            AuthViewModel(firebaseAuth: FirebaseAuth.shared)
-        }
     }
 }
